@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.example;
+
+import "google/protobuf/empty.proto";
+
+service InputService {
+  rpc GetInputList (google.protobuf.Empty) returns (InputList);
+}
+
+message Input {
+  int64 id = 1;
+  string requestType = 2;
+  string technology = 3;
+  string requestedBy = 4;
+  int32 amountOfQuestion = 5;
+  string date = 6;
+}
+
+message InputList {
+  repeated Input inputs = 1;
+}
