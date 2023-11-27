@@ -28,6 +28,6 @@ public class ConsumeKafka {
         log.info(listProof);
         List<Input> list = mapper.readValue(listProof, new TypeReference<>() {
         });
-        getList = mapper.writeValueAsString(list);
+        getList = list.toString();
     }
 }

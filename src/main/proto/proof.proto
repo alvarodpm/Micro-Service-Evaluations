@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "co.edu.uniandes.mati";
+option java_outer_classname = "ProofGrpcProto";
+import "google/protobuf/timestamp.proto";
+
+package proof;
+
+service ProofGrpc {
+  rpc getListProof (ProofListRequest) returns (ProofListReply) {}
+}
+
+message ProofListRequest {
+  string name = 1;
+}
+
+
+message ProofListReply {
+  string proofList= 1;
+
+}
+
